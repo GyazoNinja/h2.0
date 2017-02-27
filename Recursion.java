@@ -2,10 +2,12 @@ package squareRoot;
 
 public class Recursion {
 
-	public double babylonianMethod(double input, double error, double guess){
-	if ((input - guess*guess) <= error){
+	public double method(double input, double error, double guess){
+	if ((guess * guess - input) <= error){
 		return guess;
 	}
-
+	return method(input, error, .5 * (guess + input/guess)); 
 	}
+	
+	public Recursion(){}
 }
